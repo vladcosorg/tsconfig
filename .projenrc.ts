@@ -1,16 +1,14 @@
-import { CustomTypescriptProject } from '@chetzof/projen-base'
+import * as path from 'node:path'
+
+import { CustomTypescriptProject } from '@vladcos/projen-base'
 
 const project = new CustomTypescriptProject({
   defaultReleaseBranch: 'main',
-  devDeps: ['@chetzof/projen-base'],
+  devDeps: ['@vladcos/projen-base'],
   name: '@vladcos/tsconfig',
   projenrcTs: true,
   entrypoint: `lib/tsconfig.json`,
-  entrypointTypes: undefined,
-
-  // deps: [],                /* Runtime dependencies of this module. */
-  // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
-  // packageName: undefined,  /* The "name" in package.json. */
+  tsconfigTemplatePath: path.resolve('./src/tsconfig.json'),
 })
 project.compileTask.reset(`cp -R src  ${project.libdir}`)
 project.synth()

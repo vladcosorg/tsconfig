@@ -1,14 +1,6 @@
 {
   "dependencies": [
     {
-      "name": "@chetzof/prettier-config",
-      "type": "build"
-    },
-    {
-      "name": "@chetzof/projen-base",
-      "type": "build"
-    },
-    {
       "name": "@swc/core",
       "type": "build"
     },
@@ -32,7 +24,11 @@
       "type": "build"
     },
     {
-      "name": "chetzof-lint-config",
+      "name": "@vladcos/prettier-config",
+      "type": "build"
+    },
+    {
+      "name": "@vladcos/projen-base",
       "type": "build"
     },
     {
