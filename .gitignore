@@ -42,9 +42,9 @@ jspm_packages/
 !/.npmrc
 !/test/
 !/tsconfig.json
-!/tsconfig.dev.json
 !/src/
 /lib
 /dist/
 !/.eslintrc.json
+!/./packemon.config.ts
 /.idea
