@@ -40,11 +40,12 @@ jspm_packages/
 !/.prettierignore
 !/.prettierrc.json
 !/.npmrc
-!/test/
+!/tests/
 !/tsconfig.json
 !/src/
 /lib
 /dist/
 !/.eslintrc.json
+!/vitest.config.ts
 !/./packemon.config.ts
 /.idea

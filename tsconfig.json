@@ -45,12 +45,15 @@
       "@/*": [
         "./*"
       ]
-    }
+    },
+    "baseUrl": "."
   },
   "include": [
     ".projenrc.js",
     "src/**/*.ts",
-    "test/**/*.ts",
+    "tests/**/*.ts",
+    "vitest.config.ts",
+    "tests/**/*.ts",
     ".projenrc.ts",
     "projenrc/**/*.ts"
   ],
