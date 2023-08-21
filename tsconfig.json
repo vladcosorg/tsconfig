@@ -45,12 +45,13 @@
       "@/*": [
         "./*"
       ]
-    }
+    },
+    "baseUrl": "."
   },
   "include": [
     ".projenrc.js",
     "src/**/*.ts",
-    "test/**/*.ts",
+    "tests/**/*.ts",
     ".projenrc.ts",
     "projenrc/**/*.ts"
   ],
