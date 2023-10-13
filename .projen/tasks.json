@@ -87,7 +87,7 @@
       "description": "Synthesize project files",
       "steps": [
         {
-          "exec": "npx -y tsx .projenrc.ts"
+          "exec": "npx -y tsx -r tsconfig-paths/register .projenrc.ts"
         }
       ]
     },
@@ -108,7 +108,18 @@
       "description": "Runs eslint against the codebase",
       "steps": [
         {
-          "exec": "eslint --ext .ts,.tsx --fix --no-error-on-unmatched-pattern src test build-tools projenrc .projenrc.ts"
+          "exec": "eslint --ext .ts,.tsx --fix --no-error-on-unmatched-pattern src tests build-tools projenrc .projenrc.ts"
+        }
+      ]
+    },
+    "format": {
+      "name": "format",
+      "steps": [
+        {
+          "exec": "prettier --write --cache --no-error-on-unmatched-pattern --ignore-unknown . || true"
+        },
+        {
+          "spawn": "eslint"
         }
       ]
     },
@@ -209,25 +220,13 @@
           "exec": "npm update npm-check-updates"
         },
         {
-          "exec": "npm-check-updates --dep dev --upgrade --target=minor"
-        },
-        {
-          "exec": "npm-check-updates --dep optional --upgrade --target=minor"
-        },
-        {
-          "exec": "npm-check-updates --dep peer --upgrade --target=minor"
-        },
-        {
-          "exec": "npm-check-updates --dep prod --upgrade --target=minor"
-        },
-        {
-          "exec": "npm-check-updates --dep bundle --upgrade --target=minor"
+          "exec": "npm-check-updates --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@types/node,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,@vladcos/projen-base,alias-hq,babel-plugin-module-resolver,eslint-import-resolver-node,eslint-import-resolver-typescript,eslint,npm-check-updates,packemon,prettier,projen,standard-version,ts-node,tsconfig-paths,tsx,typescript"
         },
         {
           "exec": "npm install"
         },
         {
-          "exec": "npm update"
+          "exec": "npm update @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser @vladcos/projen-base alias-hq babel-plugin-module-resolver eslint-import-resolver-node eslint-import-resolver-typescript eslint npm-check-updates packemon prettier projen standard-version ts-node tsconfig-paths tsx typescript"
         },
         {
           "exec": "npx projen"

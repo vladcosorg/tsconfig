@@ -1,34 +1,28 @@
 {
   "dependencies": [
     {
-      "name": "@bleed-believer/path-alias",
-      "type": "build"
-    },
-    {
-      "name": "@swc/core",
-      "type": "build"
-    },
-    {
       "name": "@types/node",
       "version": "^16",
       "type": "build"
     },
     {
       "name": "@typescript-eslint/eslint-plugin",
-      "version": "^5",
+      "version": "^6",
       "type": "build"
     },
     {
       "name": "@typescript-eslint/parser",
-      "version": "^5",
+      "version": "^6",
       "type": "build"
     },
     {
       "name": "@vladcos/eslint-config",
+      "version": "latest",
       "type": "build"
     },
     {
       "name": "@vladcos/prettier-config",
+      "version": "latest",
       "type": "build"
     },
     {
@@ -37,14 +31,12 @@
     },
     {
       "name": "alias-hq",
+      "version": "^6",
       "type": "build"
     },
     {
       "name": "babel-plugin-module-resolver",
-      "type": "build"
-    },
-    {
-      "name": "eslint-config-prettier",
+      "version": "^5",
       "type": "build"
     },
     {
@@ -53,10 +45,6 @@
     },
     {
       "name": "eslint-import-resolver-typescript",
-      "type": "build"
-    },
-    {
-      "name": "eslint-plugin-import",
       "type": "build"
     },
     {
@@ -71,10 +59,12 @@
     },
     {
       "name": "packemon",
+      "version": "^3",
       "type": "build"
     },
     {
       "name": "prettier",
+      "version": "^3",
       "type": "build"
     },
     {
@@ -92,10 +82,12 @@
     },
     {
       "name": "tsconfig-paths",
+      "version": "^4",
       "type": "build"
     },
     {
       "name": "tsx",
+      "version": "^3",
       "type": "build"
     },
     {
