@@ -39,12 +39,12 @@ jspm_packages/
 !/.github/workflows/upgrade-main.yml
 !/.prettierignore
 !/.prettierrc.json
-!/.npmrc
 !/tests/
 !/tsconfig.json
 !/src/
 /lib
 /dist/
 !/.eslintrc.json
-!/./packemon.config.ts
+!/packemon.config.ts
+!/.npmrc
 /.idea
